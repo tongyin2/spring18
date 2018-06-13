@@ -86,6 +86,30 @@ public class TestBSTMap {
         assertTrue(b.get("hi") != null);
     }
 
+    @Test
+    public void sanityKeysetTest() {
+        BSTMap<String, Integer> b = new BSTMap<String, Integer>();
+        b.put("hi", 1);
+        b.put("a", 2);
+        b.put("b", 3);
+        b.put("c", 4);
+        for(String key : b.keySet()) {
+            System.out.print(key + " ");
+        }
+    }
+
+    @Test
+    public void sanityDelete() {
+        BSTMap<String, Integer> b = new BSTMap<String, Integer>();
+        b.put("hi", 1);
+        b.put("a", 2);
+        b.put("b", 3);
+        b.put("c", 4);
+
+        for(String key : b.keySet()) {
+            System.out.print(key + " ");
+        }
+    }
     public static void main(String[] args) {
         jh61b.junit.TestRunner.runTests(TestBSTMap.class);
     }
